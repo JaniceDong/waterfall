@@ -1,0 +1,7 @@
+{
+  "test/test07_tapbug.html": {
+    "resources": [
+      "js/zepto.js"
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				pborder-coloring: 0;
+			}
+			
+			.left {
+				width: 200px;
+				height: 100px;
+				background: yellow;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.right {
+				width: 300px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			
+			.main {
+				position: absolute;
+				left: 210px;
+				right: 310px;
+				background: blue;
+				height: 100px;
+			}
+			
+			.box {
+				width: 150px;
+				height: 150px;
+				overflow: hidden;
+			}
+			
+			.dotted {
+				width: 100%;
+				height: 100%;
+				border: 75px dotted #CCCCCC;
+			}
+			
+			.double {
+				/*实现三线效果*/
+				width: 120px;
+				height: 20px;
+				border-top: 60px double red;
+				border-bottom: 20px solid black;
+			}
+			.color {
+				width: 120px;
+				height: 100px;
+				color: #E46775;
+				border: 2px solid;
+			}			
+			.border-color {
+				width: 100px;
+				height: 100px;
+				border: 1px solid;
+				color: #ccc;
+				transition: color 0.25s;
+				position: relative;
+				margin:10px 0 0 10px;
+			}			
+			.border-color:before {
+				content: " ";
+				display: block;
+				width: 60px;
+				/*height: 10px;*/
+				border-color: #ccc;
+				border-top: 10px solid;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -5px 0 0 -30px;
+			}			
+			.border-color:after {
+				content: " ";
+				display: block;
+				/*width: 10px;*/
+				height: 60px;
+				border-color: #ccc;
+				border-left: 10px solid;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -30px 0 0 -5px;
+			}			
+			.border-color:hover {
+				color: #f6c;
+			}
+			.position--right{
+				height: 300px;
+				border:2px solid red;
+				border-right: 50px solid transparent;
+				background-image: url(images/face01.jpg);
+				background-repeat: no-repeat;
+				background-position: 100% 40px;
+			}
+			.triangle{
+				/*width:100px;
+				height: 100px;*/
+				width:0px;
+				border:100px solid;
+				border-color:red transparent transparent transparent;
+			}
+			.triangle-all{
+				width:800px;
+				height: auto;
+				overflow:hidden;
+				margin:0 auto;
+			}
+			.triangle0{
+				width: 600px;
+				border:5px solid;
+				border-color:transparent transparent #c00;
+			}
+			.triangle1{
+				width: 600px;
+				border:5px solid;
+				border-color:#CC0000 transparent transparent;
+			}
+			.triangle2{
+				width:610px;
+				height: 100px;
+				background:#c00;
+			}
+			.checkbox{
+				width:16px;
+				height: 16px;
+				border:2px solid transparent;
+				box-shadow: inset 0 1px,inset 1px 0,inset -1px 0,inset 0 -1px;
+				background-color:#fff;
+				background-clip: content-box;
+				color: #d0d0d5;
+			}
+			.drop{	
+				width:50px;
+				height: 50px;
+				overflow:hidden;
+			}
+			.drop-shadow{
+				position:relative;
+				left: -50px;
+				border-right: 50px solid transparent;		
+				filter:drop-shadow(50px 0px red);
+				-webkit-filter:drop-shadow(50px 0px red);
+				-moz-filter:drop-shadow(50px 0px red);
+				-o-filter:drop-shadow(50px 0px red);
+				-ms-filter:drop-shadow(50px 0px red);
+			}
+			
+			.con{
+				border-left:300px solid #222;
+				background:darksalmon;
+			}
+			.con_left{
+				width:300px;
+				margin-left:-300px;
+				float:left;
+				overflow:hidden;
+				color:#fff;
+			}
+			section{
+				overflow:hidden;
+			}
+			button{
+				outline: none;
+				margin-top:5px;
+			}
+			.clearfix::after {
+            content: ".";
+            clear: both;
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            height: 0;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+		</style>
+	</head>
+	<body>
+		<!--<div class="left">左边</div>
+			<div class="main">main</div>
+			<div class="right">right</div>-->
+		<div class="box">
+			<div class="dotted">ie7 ie8实现圆角</div>
+		</div>
+		<div class="double"></div>
+		<div class="color">不设置border的颜色时，对元素设置的color会默认为border的颜色</div>
+		<div class="border-color"></div>
+		<div class="position--right">用border实现background-position距离右边固定</div>
+		<!--<div class="triangle"></div>-->
+		<div class="triangle-all">
+			<div class="triangle0"></div>
+			<div class="triangle2"></div>
+			<div class="triangle1"></div>
+		</div>
+		<div class="checkbox"></div>
+		<div class="drop">
+			<img class="drop-shadow" src="images/flower.png" alt="" />
+		</div>	
+		<div class="con clearfix">		
+				<nav class="con_left">
+					<h3>导航1</h3>
+				</nav>
+				
+			<section>
+				<div class="module">模块1</div>
+			</section>
+		</div>
+		<button class="btn1" onclick="btn1()">导航多多多</button>
+		<button class="btn2" onclick="btn2()">模块多多多</button>
+	</body>
+	<script>
+	var oBtn1 = document.getElementsByClassName("btn1")[0];
+	var oBtn2 = document.getElementsByClassName("btn2")[0];
+	var con = document.getElementsByClassName("con")[0];
+	function btn1(){
+		var con_left = document.getElementsByClassName("con_left")[0];
+		
+		con_left.innerHTML += "<h3>导航1</h3>";	
+	}
+	function btn2(){
+		var section = document.getElementsByTagName("section")[0];
+		section.innerHTML += '<div class="module">模块1</div>';
+	}
+	</script>
+
+</html>

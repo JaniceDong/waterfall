@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>flex布局</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*iphone6*/
+			/*html{
+				font-size:37.5px;
+			}*/
+			/*iphone5*/
+			@media only screen and (min-device-width:320px ) and(max-device-width:375px){
+				html{
+					font-size:32.0px;
+				}
+			}
+			/*iphone6*/
+			@media only screen and (min-device-width:375px) and (max-device-width:414px ) {
+				html{
+					font-size:37.5px;
+				}
+			}
+			/*ipad*/
+			@media only screen and (min-device-width:414px ) {
+				html{
+					font-size:41.4px;
+				}
+			}
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			/*body{
+				overflow:scroll;
+				-webkit-overflow-scrolling: touch;
+			}*/
+			.container {
+				width: 100%;
+				height: 100%;
+				background: darkgray;
+			}
+			
+			.nav {
+				width: 100%;
+				height: 50px;
+				display: -webkit-flex;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.flex {
+				flex: 1;
+				background: darkcyan;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size:.32rem;
+			}
+			.dan{
+				width:100%;
+				overflow:hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				height: 30px;
+				background:darkgoldenrod;
+				line-height: 30px;
+			}
+			.duo{
+				width:100%;
+				line-height: 20px;
+				overflow:hidden;
+				word-break: break-all;
+				text-overflow:ellipsis;
+				display:-webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 5;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="nav" id="content">
+				<div class="flex">导航仪</div>
+				<div class="flex">导航二</div>
+				<div class="flex">导航三</div>
+			</div>
+			<p class="dan">这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的</p>
+			<p class="duo">
+				其实rem是相对于html的font-size大小来决定的，那要是html定了大小，岂不是总体的布局什么的大小也定了么？对于html大小适配不同的终端，用到媒体查询，我倒是觉得用vw直接设置html的大小更好用，个人意见，供大家参考！
+				为了解决rem在进行单位换算上的麻烦问题，给大家介绍个使用rem的小方法，设置html字体大小为font-size:62.5%;然后使用rem的时候就更好用了，比如1.2rem=12px,1.4rem=14px,1.6rem=16px.
+			</p>
+			<p class="dan">这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的</p>
+			<p class="duo">
+				其实rem是相对于html的font-size大小来决定的，那要是html定了大小，岂不是总体的布局什么的大小也定了么？对于html大小适配不同的终端，用到媒体查询，我倒是觉得用vw直接设置html的大小更好用，个人意见，供大家参考！
+				为了解决rem在进行单位换算上的麻烦问题，给大家介绍个使用rem的小方法，设置html字体大小为font-size:62.5%;然后使用rem的时候就更好用了，比如1.2rem=12px,1.4rem=14px,1.6rem=16px.
+			</p>
+			<p class="dan">这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的</p>
+			<p class="duo">
+				其实rem是相对于html的font-size大小来决定的，那要是html定了大小，岂不是总体的布局什么的大小也定了么？对于html大小适配不同的终端，用到媒体查询，我倒是觉得用vw直接设置html的大小更好用，个人意见，供大家参考！
+				为了解决rem在进行单位换算上的麻烦问题，给大家介绍个使用rem的小方法，设置html字体大小为font-size:62.5%;然后使用rem的时候就更好用了，比如1.2rem=12px,1.4rem=14px,1.6rem=16px.
+			</p>
+			<p class="dan">这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的</p>
+			<p class="duo">
+				其实rem是相对于html的font-size大小来决定的，那要是html定了大小，岂不是总体的布局什么的大小也定了么？对于html大小适配不同的终端，用到媒体查询，我倒是觉得用vw直接设置html的大小更好用，个人意见，供大家参考！
+				为了解决rem在进行单位换算上的麻烦问题，给大家介绍个使用rem的小方法，设置html字体大小为font-size:62.5%;然后使用rem的时候就更好用了，比如1.2rem=12px,1.4rem=14px,1.6rem=16px.
+			</p>
+			<p class="dan">这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的</p>
+			<p class="duo">
+				其实rem是相对于html的font-size大小来决定的，那要是html定了大小，岂不是总体的布局什么的大小也定了么？对于html大小适配不同的终端，用到媒体查询，我倒是觉得用vw直接设置html的大小更好用，个人意见，供大家参考！
+				为了解决rem在进行单位换算上的麻烦问题，给大家介绍个使用rem的小方法，设置html字体大小为font-size:62.5%;然后使用rem的时候就更好用了，比如1.2rem=12px,1.4rem=14px,1.6rem=16px.
+			</p>
+			<p class="dan">这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的这是一个段落标签，要显示文本溢出显示省略号，单行的</p>
+			<p class="duo">
+				其实rem是相对于html的font-size大小来决定的，那要是html定了大小，岂不是总体的布局什么的大小也定了么？对于html大小适配不同的终端，用到媒体查询，我倒是觉得用vw直接设置html的大小更好用，个人意见，供大家参考！
+				为了解决rem在进行单位换算上的麻烦问题，给大家介绍个使用rem的小方法，设置html字体大小为font-size:62.5%;然后使用rem的时候就更好用了，比如1.2rem=12px,1.4rem=14px,1.6rem=16px.
+			</p>
+		<script type="text/javascript">
+		var flex = document.getElementsByClassName("flex")[0];
+		
+		var num = getStyle(flex,"fontSize");
+	
+		console.log(num);
+			function getStyle(obj,attr){
+				if(obj.currentStyle){
+					return obj.currentStyle[attr];
+				}else{
+					return getComputedStyle(obj,false)[attr];
+				}
+			}
+		</script>
+	</body>
+
+</html>
